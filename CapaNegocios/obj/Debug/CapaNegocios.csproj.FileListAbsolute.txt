@@ -1,0 +1,9 @@
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\CapaNegocios.dll
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\CapaNegocios.pdb
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\CapaDatos.dll
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\EntityFramework.dll
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\CapaDatos.pdb
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\bin\Debug\EntityFramework.xml
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\obj\Debug\CapaNegocios.csprojResolveAssemblyReference.cache
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\obj\Debug\CapaNegocios.dll
+c:\users\hp\documents\visual studio 2015\Projects\AlmacenTecno\CapaNegocios\obj\Debug\CapaNegocios.pdb

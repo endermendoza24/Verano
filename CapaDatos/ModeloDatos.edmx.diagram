@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b0da4584d3a47ab8df369d22c6ba94a" Name="Diagram1">
+        <EntityTypeShape EntityType="AlmacenTecnoModel.catArticulos" Width="1.5" PointX="5" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.catMarcas" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_catArticulos_catMarcas" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.catEmpleados" Width="1.5" PointX="3.375" PointY="11.375" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.catProveedores" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.tblClientes" Width="1.5" PointX="3.375" PointY="8.625" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.tblCompras" Width="1.5" PointX="7.625" PointY="5.75" />
+        <EntityTypeShape EntityType="AlmacenTecnoModel.tblVentas" Width="1.5" PointX="5.625" PointY="11.125" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_catArticulos_catProveedores" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblCompras_catEmpleados" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblVentas_catEmpleados" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblCompras_catProveedores" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblVentas_tblClientes" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

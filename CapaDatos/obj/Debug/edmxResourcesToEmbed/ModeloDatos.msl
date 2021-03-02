@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AlmacenTecnoModelStoreContainer" CdmEntityContainer="AlmacenTecnoEntities">
+    <EntitySetMapping Name="catArticulos">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.catArticulos">
+        <MappingFragment StoreEntitySet="catArticulos">
+          <ScalarProperty Name="idProveedores" ColumnName="idProveedores" />
+          <ScalarProperty Name="categoria" ColumnName="categoria" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
+          <ScalarProperty Name="nombreArticulo" ColumnName="nombreArticulo" />
+          <ScalarProperty Name="idMarca" ColumnName="idMarca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="catMarcas">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.catMarcas">
+        <MappingFragment StoreEntitySet="catMarcas">
+          <ScalarProperty Name="idMarca" ColumnName="idMarca" />
+          <ScalarProperty Name="nombreMarca" ColumnName="nombreMarca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="agregarArticulo" FunctionName="AlmacenTecnoModel.Store.agregarArticulo" />
+    <FunctionImportMapping FunctionImportName="agregarMarca" FunctionName="AlmacenTecnoModel.Store.agregarMarca" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AlmacenTecnoModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AlmacenTecnoModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AlmacenTecnoModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AlmacenTecnoModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenTecnoModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AlmacenTecnoModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlmacenTecnoModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AlmacenTecnoModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AlmacenTecnoModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="catEmpleados">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.catEmpleados">
+        <MappingFragment StoreEntitySet="catEmpleados">
+          <ScalarProperty Name="fechaEntrada" ColumnName="fechaEntrada" />
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="primerNombre" ColumnName="primerNombre" />
+          <ScalarProperty Name="numCedula" ColumnName="numCedula" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="catProveedores">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.catProveedores">
+        <MappingFragment StoreEntitySet="catProveedores">
+          <ScalarProperty Name="ciudad" ColumnName="ciudad" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="nombreProveedor" ColumnName="nombreProveedor" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblClientes">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.tblClientes">
+        <MappingFragment StoreEntitySet="tblClientes">
+          <ScalarProperty Name="primerApellido" ColumnName="primerApellido" />
+          <ScalarProperty Name="primerNombre" ColumnName="primerNombre" />
+          <ScalarProperty Name="numCedula" ColumnName="numCedula" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCompras">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.tblCompras">
+        <MappingFragment StoreEntitySet="tblCompras">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="iva" ColumnName="iva" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idCompra" ColumnName="idCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVentas">
+      <EntityTypeMapping TypeName="AlmacenTecnoModel.tblVentas">
+        <MappingFragment StoreEntitySet="tblVentas">
+          <ScalarProperty Name="total" ColumnName="total" />
+          <ScalarProperty Name="iva" ColumnName="iva" />
+          <ScalarProperty Name="precio" ColumnName="precio" />
+          <ScalarProperty Name="cantidad" ColumnName="cantidad" />
+          <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
+          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="idVentas" ColumnName="idVentas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="borrarMarcas" FunctionName="AlmacenTecnoModel.Store.borrarMarcas" />
+    <FunctionImportMapping FunctionImportName="editarMarcas" FunctionName="AlmacenTecnoModel.Store.editarMarcas" />
+    <FunctionImportMapping FunctionImportName="insertarCliente" FunctionName="AlmacenTecnoModel.Store.insertarCliente" />
+    <FunctionImportMapping FunctionImportName="insertarCompra" FunctionName="AlmacenTecnoModel.Store.insertarCompra" />
+    <FunctionImportMapping FunctionImportName="insertarEmpleado" FunctionName="AlmacenTecnoModel.Store.insertarEmpleado" />
+    <FunctionImportMapping FunctionImportName="insertarProveedor" FunctionName="AlmacenTecnoModel.Store.insertarProveedor" />
+    <FunctionImportMapping FunctionImportName="insertarVenta" FunctionName="AlmacenTecnoModel.Store.insertarVenta" />
+  </EntityContainerMapping>
+</Mapping>
