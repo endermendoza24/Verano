@@ -10,24 +10,33 @@
 namespace CapaPresentacion.catalogos {
     
     
-    public partial class gridCatProveedor {
+    public partial class gridCatClientes {
         
         /// <summary>
-        /// Control dtgMostrarProveedores.
+        /// Control btnRetornar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dtgMostrarProveedores;
+        protected global::System.Web.UI.WebControls.Button btnRetornar;
         
         /// <summary>
-        /// Control catProveedor.
+        /// Control dtgVerClientes.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource catProveedor;
+        protected global::System.Web.UI.WebControls.GridView dtgVerClientes;
+        
+        /// <summary>
+        /// Control catClientes.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource catClientes;
     }
 }

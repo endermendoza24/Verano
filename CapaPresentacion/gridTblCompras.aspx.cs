@@ -13,5 +13,10 @@ namespace CapaPresentacion.tablas
         {
 
         }
+
+        protected void btnRetornar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("tblCompras.aspx");
+        }
     }
 }

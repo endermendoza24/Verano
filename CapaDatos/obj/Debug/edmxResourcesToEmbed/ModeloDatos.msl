@@ -92,12 +92,12 @@
     <EntitySetMapping Name="tblCompras">
       <EntityTypeMapping TypeName="AlmacenTecnoModel.tblCompras">
         <MappingFragment StoreEntitySet="tblCompras">
+          <ScalarProperty Name="articulo" ColumnName="articulo" />
           <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="iva" ColumnName="iva" />
           <ScalarProperty Name="precio" ColumnName="precio" />
           <ScalarProperty Name="cantidad" ColumnName="cantidad" />
           <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-          <ScalarProperty Name="idCliente" ColumnName="idCliente" />
           <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
           <ScalarProperty Name="idCompra" ColumnName="idCompra" />

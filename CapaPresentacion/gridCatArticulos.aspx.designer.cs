@@ -10,24 +10,33 @@
 namespace CapaPresentacion {
     
     
-    public partial class gridCatMarca {
+    public partial class gridCatArticulos {
         
         /// <summary>
-        /// Control dtgMostrarMarca.
+        /// Control btnRetornar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dtgMostrarMarca;
+        protected global::System.Web.UI.WebControls.Button btnRetornar;
         
         /// <summary>
-        /// Control catMarcas.
+        /// Control dtgMostrarArticulos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource catMarcas;
+        protected global::System.Web.UI.WebControls.GridView dtgMostrarArticulos;
+        
+        /// <summary>
+        /// Control catArticulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource catArticulo;
     }
 }

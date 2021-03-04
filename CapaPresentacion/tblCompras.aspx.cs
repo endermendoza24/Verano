@@ -22,8 +22,9 @@ namespace CapaPresentacion.tablas
         {
             entidad.fecha = Convert.ToDateTime(dtpFecha.Value);
             entidad.idProveedor = Convert.ToInt32(drpIdProveedor.Text);
-            entidad.idCliente = Convert.ToInt32(drpCliente.Text);
+            //entidad.idCliente = Convert.ToInt32(drpCliente.Text);
             entidad.idEmpleado = Convert.ToInt32(drpIdEmpleado.Text);
+            entidad.articulo = txtArticulo.Text;
             entidad.cantidad = Convert.ToDecimal(txtCantidad.Text);
             entidad.precio = Convert.ToDecimal(txtPrecio.Text);
             entidad.iva = ((entidad.cantidad * entidad.precio) * 15) / 100;

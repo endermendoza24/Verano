@@ -20,16 +20,32 @@ namespace CapaPresentacion.catalogos
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            entidad.numCedula = txtNumCedula.Text;
-            entidad.primerNombre = txtNombre.Text;
-            entidad.primerApellido = txtApelido.Text;
-            metodoCli.insertarCliente(entidad);
-            Response.Redirect("gridCatClientes.aspx");
+            try
+            {
+                entidad.numCedula = txtNumCedula.Text;
+                entidad.primerNombre = txtNombre.Text;
+                entidad.primerApellido = txtApelido.Text;
+                metodoCli.insertarCliente(entidad);
+                limpiar();
+                Response.Redirect("gridCatClientes.aspx");
+            }
+            catch (Exception)
+            {
+                Response.Write("<script> alert('Ocurrió un error');</script>");
+            }
         }
 
         protected void btnVerCLientes_Click(object sender, EventArgs e)
         {
             Response.Redirect("gridCatClientes.aspx");
+            limpiar();
+        }
+
+        public void limpiar()
+        {
+            txtNumCedula.Text = "";
+            txtNombre.Text = "";
+            txtApelido.Text = "";
         }
     }
 }

@@ -10,24 +10,33 @@
 namespace CapaPresentacion.tablas {
     
     
-    public partial class gridTblVentas {
+    public partial class gridTblCompras {
         
         /// <summary>
-        /// Control dtgVerVentas.
+        /// Control btnRetornar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dtgVerVentas;
+        protected global::System.Web.UI.WebControls.Button btnRetornar;
         
         /// <summary>
-        /// Control ventas.
+        /// Control dtgCompras.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource ventas;
+        protected global::System.Web.UI.WebControls.GridView dtgCompras;
+        
+        /// <summary>
+        /// Control compra.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource compra;
     }
 }

@@ -129,8 +129,8 @@
     <FunctionImport Name="insertarCompra">
       <Parameter Name="fecha" Mode="In" Type="DateTime" />
       <Parameter Name="idProveedor" Mode="In" Type="Int32" />
-      <Parameter Name="idCliente" Mode="In" Type="Int32" />
       <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="articulo" Mode="In" Type="String" />
       <Parameter Name="cantidad" Mode="In" Type="Decimal" />
       <Parameter Name="precio" Mode="In" Type="Decimal" />
       <Parameter Name="iva" Mode="In" Type="Decimal" />
@@ -199,7 +199,7 @@
     </Key>
     <Property Name="idProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nombreProveedor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="correo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="correo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ciudad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="catArticulos" Relationship="AlmacenTecnoModel.FK_catArticulos_catProveedores" FromRole="catProveedores" ToRole="catArticulos" />
@@ -227,9 +227,10 @@
     <Property Name="cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="precio" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <Property Name="iva" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-    <Property Name="total" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
     <NavigationProperty Name="catEmpleados" Relationship="AlmacenTecnoModel.FK_tblCompras_catEmpleados" FromRole="tblCompras" ToRole="catEmpleados" />
     <NavigationProperty Name="catProveedores" Relationship="AlmacenTecnoModel.FK_tblCompras_catProveedores" FromRole="tblCompras" ToRole="catProveedores" />
+    <Property Name="articulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
   </EntityType>
   <EntityType Name="tblVentas">
     <Key>

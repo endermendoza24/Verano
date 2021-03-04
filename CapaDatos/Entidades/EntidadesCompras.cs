@@ -13,9 +13,10 @@ namespace CapaDatos
         public int idProveedor { get; set; }
         public int idCliente { get; set; }
         public int idEmpleado { get; set; }
+        public string articulo { get; set; }
         public decimal cantidad { get; set; }
         public decimal precio { get; set; }
         public decimal iva { get; set; }
-        public Nullable<decimal> total { get; set; }
+        public decimal total { get; set; }
     }
 }

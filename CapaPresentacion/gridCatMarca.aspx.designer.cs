@@ -7,27 +7,36 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace CapaPresentacion.catalogos {
+namespace CapaPresentacion {
     
     
-    public partial class gridCatEmpleado {
+    public partial class gridCatMarca {
         
         /// <summary>
-        /// Control dtgMostrarEmpleados.
+        /// Control btnRetornar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView dtgMostrarEmpleados;
+        protected global::System.Web.UI.WebControls.Button btnRetornar;
         
         /// <summary>
-        /// Control catEmpleado.
+        /// Control dtgMostrarMarca.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource catEmpleado;
+        protected global::System.Web.UI.WebControls.GridView dtgMostrarMarca;
+        
+        /// <summary>
+        /// Control catMarcas.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource catMarcas;
     }
 }

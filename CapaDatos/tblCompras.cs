@@ -22,7 +22,8 @@ namespace CapaDatos
         public decimal cantidad { get; set; }
         public decimal precio { get; set; }
         public decimal iva { get; set; }
-        public Nullable<decimal> total { get; set; }
+        public decimal total { get; set; }
+        public string articulo { get; set; }
     
         public virtual catEmpleados catEmpleados { get; set; }
         public virtual catProveedores catProveedores { get; set; }

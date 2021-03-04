@@ -40,24 +40,6 @@ namespace CapaPresentacion.tablas {
         protected global::System.Web.UI.WebControls.SqlDataSource idProveedor;
         
         /// <summary>
-        /// Control drpCliente.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList drpCliente;
-        
-        /// <summary>
-        /// Control CLIENTE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource CLIENTE;
-        
-        /// <summary>
         /// Control drpIdEmpleado.
         /// </summary>
         /// <remarks>
@@ -74,6 +56,15 @@ namespace CapaPresentacion.tablas {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource empleado;
+        
+        /// <summary>
+        /// Control txtArticulo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtArticulo;
         
         /// <summary>
         /// Control txtCantidad.

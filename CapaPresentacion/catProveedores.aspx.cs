@@ -20,18 +20,34 @@ namespace CapaPresentacion.catalogos
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-            entidad.nombreProveedor = txtNombreProveedor.Text;
-            entidad.correo = txtCorreo.Value;
-            entidad.telefono = txtTele.Value;
-            entidad.ciudad = txtCiudad.Text;
-            metodoPro.insertarProveedor(entidad);
-            Response.Redirect("gridCatProveedor.aspx");
+            try
+            {
+                entidad.nombreProveedor = txtNombreProveedor.Text;
+                entidad.correo = txtCorreo.Value;
+                entidad.telefono = txtTele.Value;
+                entidad.ciudad = txtCiudad.Text;
+                metodoPro.insertarProveedor(entidad);
+                Response.Redirect("gridCatProveedor.aspx");
+            }
+            catch (Exception)
+            {
+                Response.Write("<script> alert('Ocurrió un error');</script>");
+            }
 
         }
 
         protected void btnVerProveedores_Click(object sender, EventArgs e)
         {
+            limpiar();
             Response.Redirect("gridCatProveedor.aspx");
+        }
+
+        void limpiar()
+        {
+            txtNombreProveedor.Text = "";
+            txtCorreo.Value = "";
+            txtTele.Value = "";
+            txtCiudad.Text = "";
         }
     }
 }

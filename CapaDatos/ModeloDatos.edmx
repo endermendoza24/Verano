@@ -38,7 +38,7 @@
           </Key>
           <Property Name="idProveedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="nombreProveedor" Type="varchar" MaxLength="100" Nullable="false" />
-          <Property Name="correo" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="correo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="telefono" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ciudad" Type="varchar" MaxLength="30" Nullable="false" />
         </EntityType>
@@ -68,12 +68,12 @@
           <Property Name="idCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="fecha" Type="date" Nullable="false" />
           <Property Name="idProveedor" Type="int" Nullable="false" />
-          <Property Name="idCliente" Type="int" Nullable="false" />
           <Property Name="idEmpleado" Type="int" Nullable="false" />
+          <Property Name="articulo" Type="varchar" MaxLength="100" Nullable="false" />
           <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="iva" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="total" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="total" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="tblVentas">
           <Key>
@@ -185,8 +185,8 @@
         <Function Name="insertarCompra" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="fecha" Type="date" Mode="In" />
           <Parameter Name="idProveedor" Type="int" Mode="In" />
-          <Parameter Name="idCliente" Type="int" Mode="In" />
           <Parameter Name="idEmpleado" Type="int" Mode="In" />
+          <Parameter Name="articulo" Type="varchar" Mode="In" />
           <Parameter Name="cantidad" Type="decimal" Mode="In" />
           <Parameter Name="precio" Type="decimal" Mode="In" />
           <Parameter Name="iva" Type="decimal" Mode="In" />
@@ -410,8 +410,8 @@
           <FunctionImport Name="insertarCompra">
             <Parameter Name="fecha" Mode="In" Type="DateTime" />
             <Parameter Name="idProveedor" Mode="In" Type="Int32" />
-            <Parameter Name="idCliente" Mode="In" Type="Int32" />
             <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
+            <Parameter Name="articulo" Mode="In" Type="String" />
             <Parameter Name="cantidad" Mode="In" Type="Decimal" />
             <Parameter Name="precio" Mode="In" Type="Decimal" />
             <Parameter Name="iva" Mode="In" Type="Decimal" />
@@ -480,7 +480,7 @@
           </Key>
           <Property Name="idProveedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="nombreProveedor" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-          <Property Name="correo" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="correo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
           <Property Name="telefono" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ciudad" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="catArticulos" Relationship="AlmacenTecnoModel.FK_catArticulos_catProveedores" FromRole="catProveedores" ToRole="catArticulos" />
@@ -508,9 +508,10 @@
           <Property Name="cantidad" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="precio" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
           <Property Name="iva" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
-          <Property Name="total" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="total" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <NavigationProperty Name="catEmpleados" Relationship="AlmacenTecnoModel.FK_tblCompras_catEmpleados" FromRole="tblCompras" ToRole="catEmpleados" />
           <NavigationProperty Name="catProveedores" Relationship="AlmacenTecnoModel.FK_tblCompras_catProveedores" FromRole="tblCompras" ToRole="catProveedores" />
+          <Property Name="articulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="tblVentas">
           <Key>
@@ -684,12 +685,12 @@
           <EntitySetMapping Name="tblCompras">
             <EntityTypeMapping TypeName="AlmacenTecnoModel.tblCompras">
               <MappingFragment StoreEntitySet="tblCompras">
+                <ScalarProperty Name="articulo" ColumnName="articulo" />
                 <ScalarProperty Name="total" ColumnName="total" />
                 <ScalarProperty Name="iva" ColumnName="iva" />
                 <ScalarProperty Name="precio" ColumnName="precio" />
                 <ScalarProperty Name="cantidad" ColumnName="cantidad" />
                 <ScalarProperty Name="idEmpleado" ColumnName="idEmpleado" />
-                <ScalarProperty Name="idCliente" ColumnName="idCliente" />
                 <ScalarProperty Name="idProveedor" ColumnName="idProveedor" />
                 <ScalarProperty Name="fecha" ColumnName="fecha" />
                 <ScalarProperty Name="idCompra" ColumnName="idCompra" />

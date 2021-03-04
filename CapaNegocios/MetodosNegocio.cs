@@ -90,8 +90,9 @@ namespace CapaNegocios
             tblCompras tabla = new tblCompras();
             tabla.fecha = entidades.fecha;
             tabla.idProveedor = entidades.idProveedor;
-            tabla.idCliente = entidades.idCliente;
+            //tabla.idCliente = entidades.idCliente;
             tabla.idEmpleado = entidades.idEmpleado;
+            tabla.articulo = entidades.articulo;
             tabla.cantidad = entidades.cantidad;
             tabla.precio = entidades.precio;
             tabla.iva = entidades.iva;

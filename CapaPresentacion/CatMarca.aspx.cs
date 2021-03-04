@@ -25,6 +25,7 @@ namespace CapaPresentacion
             {
                 entidad.nombreMarca = Convert.ToString(txtNombreMarca.Text);
                 metodo.insertarMarca(entidad);
+                txtNombreMarca.Text = "";
                 Response.Redirect("gridCatMarca.aspx");
             }
             catch (Exception)
@@ -32,6 +33,7 @@ namespace CapaPresentacion
                 Response.Write("<script>alert('Ha ocurrido un error');</script)");
             }
         }
+
 
         protected void btnVerMarcas_Click(object sender, EventArgs e)
         {

@@ -24,7 +24,7 @@
         </div>
         <br />
         <asp:Button ID="btnGuardar" CssClass="btn btn-primary" runat="server" Text="Guardar" OnClick="btnGuardar_Click" />&nbsp
-        <asp:Button ID="btnVerEmpleados" CssClass="btn btn-danger" runat="server" Text="Ver empleados" OnClick="btnVerEmpleados_Click" />
+        <asp:Button ID="btnVerEmpleados" CssClass="btn btn-success" runat="server" Text="Ver empleados" OnClick="btnVerEmpleados_Click" />
 
     </div>
 </asp:Content>

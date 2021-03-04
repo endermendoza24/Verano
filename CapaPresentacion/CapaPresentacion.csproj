@@ -95,20 +95,28 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bootsrap\bootstrap.min.css" />
-    <Content Include="catalogos\catArticulos.aspx" />
-    <Content Include="catalogos\catClientes.aspx" />
-    <Content Include="catalogos\catEmpleados.aspx" />
-    <Content Include="catalogos\catProveedores.aspx" />
-    <Content Include="catalogos\gridCatClientes.aspx" />
-    <Content Include="catalogos\gridCatEmpleado.aspx" />
-    <Content Include="catalogos\gridCatProveedor.aspx" />
+    <Content Include="catArticulos.aspx" />
+    <Content Include="catClientes.aspx" />
+    <Content Include="catEmpleados.aspx" />
+    <Content Include="catProveedores.aspx" />
+    <Content Include="gridCatClientes.aspx" />
+    <Content Include="gridCatEmpleado.aspx" />
+    <Content Include="gridCatProveedor.aspx" />
     <Content Include="css\estilosFooter.css" />
     <Content Include="css\favicon.ico" />
-    <Content Include="catalogos\gridCatArticulos.aspx" />
-    <Content Include="catalogos\gridCatMarca.aspx" />
+    <Content Include="gridCatArticulos.aspx" />
+    <Content Include="gridCatMarca.aspx" />
+    <Content Include="images\articulos.jpg" />
+    <Content Include="images\cliente.png" />
+    <Content Include="images\compra.jpg" />
     <Content Include="images\desktop.jpg" />
+    <Content Include="images\empleado.png" />
     <Content Include="images\laptop.jpg" />
+    <Content Include="images\marcas.jpg" />
     <Content Include="images\printer.jpg" />
+    <Content Include="images\proveedore.png" />
+    <Content Include="images\ventas.jpg" />
+    <Content Include="images\ventas.png" />
     <Content Include="index.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -123,84 +131,87 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="catalogos\CatMarca.aspx" />
+    <Content Include="CatMarca.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
-    <Content Include="tablas\gridTblCompras.aspx" />
-    <Content Include="tablas\gridTblVentas.aspx" />
-    <Content Include="tablas\tblCompras.aspx" />
-    <Content Include="tablas\tblVentas.aspx" />
+    <Content Include="gridTblCompras.aspx" />
+    <Content Include="gridTblVentas.aspx" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\jquery-3.5.1.min.js" />
+    <Content Include="scripts\popper.min.js" />
+    <Content Include="tblCompras.aspx" />
+    <Content Include="tblVentas.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="catalogos\catArticulos.aspx.cs">
+    <Compile Include="catArticulos.aspx.cs">
       <DependentUpon>catArticulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\catArticulos.aspx.designer.cs">
+    <Compile Include="catArticulos.aspx.designer.cs">
       <DependentUpon>catArticulos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\catClientes.aspx.cs">
+    <Compile Include="catClientes.aspx.cs">
       <DependentUpon>catClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\catClientes.aspx.designer.cs">
+    <Compile Include="catClientes.aspx.designer.cs">
       <DependentUpon>catClientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\catEmpleados.aspx.cs">
+    <Compile Include="catEmpleados.aspx.cs">
       <DependentUpon>catEmpleados.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\catEmpleados.aspx.designer.cs">
+    <Compile Include="catEmpleados.aspx.designer.cs">
       <DependentUpon>catEmpleados.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\CatMarca.aspx.cs">
+    <Compile Include="CatMarca.aspx.cs">
       <DependentUpon>CatMarca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\CatMarca.aspx.designer.cs">
+    <Compile Include="CatMarca.aspx.designer.cs">
       <DependentUpon>CatMarca.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\catProveedores.aspx.cs">
+    <Compile Include="catProveedores.aspx.cs">
       <DependentUpon>catProveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\catProveedores.aspx.designer.cs">
+    <Compile Include="catProveedores.aspx.designer.cs">
       <DependentUpon>catProveedores.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\gridCatArticulos.aspx.cs">
+    <Compile Include="gridCatArticulos.aspx.cs">
       <DependentUpon>gridCatArticulos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\gridCatArticulos.aspx.designer.cs">
+    <Compile Include="gridCatArticulos.aspx.designer.cs">
       <DependentUpon>gridCatArticulos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\gridCatClientes.aspx.cs">
+    <Compile Include="gridCatClientes.aspx.cs">
       <DependentUpon>gridCatClientes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\gridCatClientes.aspx.designer.cs">
+    <Compile Include="gridCatClientes.aspx.designer.cs">
       <DependentUpon>gridCatClientes.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\gridCatEmpleado.aspx.cs">
+    <Compile Include="gridCatEmpleado.aspx.cs">
       <DependentUpon>gridCatEmpleado.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\gridCatEmpleado.aspx.designer.cs">
+    <Compile Include="gridCatEmpleado.aspx.designer.cs">
       <DependentUpon>gridCatEmpleado.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\gridCatMarca.aspx.cs">
+    <Compile Include="gridCatMarca.aspx.cs">
       <DependentUpon>gridCatMarca.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\gridCatMarca.aspx.designer.cs">
+    <Compile Include="gridCatMarca.aspx.designer.cs">
       <DependentUpon>gridCatMarca.aspx</DependentUpon>
     </Compile>
-    <Compile Include="catalogos\gridCatProveedor.aspx.cs">
+    <Compile Include="gridCatProveedor.aspx.cs">
       <DependentUpon>gridCatProveedor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="catalogos\gridCatProveedor.aspx.designer.cs">
+    <Compile Include="gridCatProveedor.aspx.designer.cs">
       <DependentUpon>gridCatProveedor.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
@@ -218,32 +229,32 @@
       <DependentUpon>Maestra.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="tablas\gridTblCompras.aspx.cs">
+    <Compile Include="gridTblCompras.aspx.cs">
       <DependentUpon>gridTblCompras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="tablas\gridTblCompras.aspx.designer.cs">
+    <Compile Include="gridTblCompras.aspx.designer.cs">
       <DependentUpon>gridTblCompras.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tablas\gridTblVentas.aspx.cs">
+    <Compile Include="gridTblVentas.aspx.cs">
       <DependentUpon>gridTblVentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="tablas\gridTblVentas.aspx.designer.cs">
+    <Compile Include="gridTblVentas.aspx.designer.cs">
       <DependentUpon>gridTblVentas.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tablas\tblCompras.aspx.cs">
+    <Compile Include="tblCompras.aspx.cs">
       <DependentUpon>tblCompras.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="tablas\tblCompras.aspx.designer.cs">
+    <Compile Include="tblCompras.aspx.designer.cs">
       <DependentUpon>tblCompras.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tablas\tblVentas.aspx.cs">
+    <Compile Include="tblVentas.aspx.cs">
       <DependentUpon>tblVentas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="tablas\tblVentas.aspx.designer.cs">
+    <Compile Include="tblVentas.aspx.designer.cs">
       <DependentUpon>tblVentas.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
