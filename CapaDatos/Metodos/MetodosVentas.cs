@@ -12,7 +12,7 @@ namespace CapaDatos
 
         public bool insertarVenta(tblVentas entidad)
         {
-            db.insertarVenta(entidad.fecha, entidad.idCliente, entidad.idEmpleado, entidad.cantidad,
+            db.insertarVenta(entidad.fecha, entidad.idCliente, entidad.idEmpleado, entidad.idArticulo, entidad.cantidad,
                 entidad.precio, entidad.iva, entidad.total);
             db.SaveChanges();
             return true;

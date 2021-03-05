@@ -20,7 +20,7 @@
                 <asp:BoundField DataField="fecha" HeaderText="Fecha" SortExpression="fecha" />               
                 <asp:TemplateField HeaderText="Id Cliente" SortExpression="idCliente">
                     <EditItemTemplate>
-                         <asp:DropDownList ID="drpIdCliente" CssClass="form-control" runat="server" DataSourceID="cliente" DataTextField="nombreCliente" DataValueField="idCliente" SelectedValue='<%# Bind("idCliente") %>'></asp:DropDownList>
+                         <asp:DropDownList ID="drpIdCliente" CssClass="form-control" runat="server" DataSourceID="cliente" DataTextField="idCliente" DataValueField="idCliente" SelectedValue='<%# Bind("idCliente") %>'></asp:DropDownList>
                          <asp:SqlDataSource ID="cliente" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [tblClientes]"></asp:SqlDataSource>
                     </EditItemTemplate>
                     <ItemTemplate>
@@ -34,6 +34,15 @@
                     </EditItemTemplate>
                     <ItemTemplate>
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("idEmpleado") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:TemplateField HeaderText="Artículo" SortExpression="idArticulo">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="drpArt" CssClass="form-control" runat="server" DataSourceID="art" DataTextField="nombreArticulo" DataValueField="idArticulo" SelectedValue='<%# Bind("idArticulo") %>'></asp:DropDownList>
+            <asp:SqlDataSource ID="art" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [catArticulos]"></asp:SqlDataSource>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("idArticulo") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="cantidad" HeaderText="Cantidad" SortExpression="cantidad" />
@@ -51,6 +60,6 @@
             <SortedDescendingHeaderStyle BackColor="#0a1c2e" />
         </asp:GridView>
         
-        <asp:SqlDataSource ID="ventas" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" DeleteCommand="DELETE FROM [tblVentas] WHERE [idVentas] = @idVentas" UpdateCommand="  UPDATE [tblVentas] SET [fecha] = @fecha, [idCliente] = @idCliente, [idEmpleado] = @idEmpleado, [cantidad] = @cantidad, [precio] = @precio, [iva] = @iva, [total] = @total WHERE [idVentas] = @idVentas" SelectCommand="SELECT * FROM [tblVentas]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="ventas" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" DeleteCommand="DELETE FROM [tblVentas] WHERE [idVentas] = @idVentas" UpdateCommand="  UPDATE [tblVentas] SET [fecha] = @fecha, [idCliente] = @idCliente, [idEmpleado] = @idEmpleado, [idArticulo] = @idArticulo, [cantidad] = @cantidad, [precio] = @precio, [iva] = @iva, [total] = @total WHERE [idVentas] = @idVentas" SelectCommand="SELECT * FROM [tblVentas]"></asp:SqlDataSource>
     </div>
 </asp:Content>

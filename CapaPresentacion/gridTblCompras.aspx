@@ -31,8 +31,16 @@
                         <asp:Label ID="Label2" runat="server" Text='<%# Bind("idEmpleado") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
-                <asp:BoundField DataField="articulo" HeaderText="Artículo" SortExpression="articulo" />
-                <asp:BoundField DataField="cantidad" HeaderText="Cantidad" SortExpression="cantidad" />
+                <asp:TemplateField HeaderText="Artículo" SortExpression="idArticulo">
+                    <EditItemTemplate>
+                        <asp:DropDownList ID="drpArticulo" CssClass="form-control" runat="server" DataSourceID="art" DataTextField="nombreArticulo" DataValueField="idArticulo" SelectedValue='<%# Bind("idArticulo") %>'></asp:DropDownList>
+             <asp:SqlDataSource ID="art" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [catArticulos]"></asp:SqlDataSource>
+                    </EditItemTemplate>
+                    <ItemTemplate>
+                        <asp:Label ID="Label3" runat="server" Text='<%# Bind("idArticulo") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:BoundField DataField="cantidad" HeaderText="Cantidad" SortExpression="cantidad" DataFormatString="{0:D}" />
                 <asp:BoundField DataField="precio" HeaderText="Precio" SortExpression="precio" />
                 <asp:BoundField DataField="iva" HeaderText="IVA" SortExpression="iva" />
                 <asp:BoundField DataField="total" HeaderText="Total" SortExpression="total" />
@@ -46,6 +54,6 @@
             <SortedDescendingCellStyle BackColor="#E5E5E5" />
             <SortedDescendingHeaderStyle BackColor="#0a1c2e" />
         </asp:GridView>
-        <asp:SqlDataSource ID="compra" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [tblCompras]" DeleteCommand="delete from[tblCompras] Where [idCompra] = @idCompra" UpdateCommand="UPDATE [tblCompras] SET [fecha] = @fecha, [idProveedor] = @idProveedor, [idEmpleado] = @idEmpleado, [articulo] = @articulo, [cantidad] = @cantidad, [precio] = @precio, [iva] = @iva, [total] = @total WHERE [idCompra] = @idCompra"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="compra" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [tblCompras]" DeleteCommand="delete from[tblCompras] Where [idCompra] = @idCompra" UpdateCommand="UPDATE [tblCompras] SET [fecha] = @fecha, [idProveedor] = @idProveedor, [idEmpleado] = @idEmpleado, [idArticulo] = @idArticulo, [cantidad] = @cantidad, [precio] = @precio, [iva] = @iva, [total] = @total WHERE [idCompra] = @idCompra"></asp:SqlDataSource>
     </div>
 </asp:Content>

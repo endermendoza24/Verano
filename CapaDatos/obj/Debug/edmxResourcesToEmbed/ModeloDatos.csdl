@@ -11,6 +11,8 @@
     <Property Name="categoria" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
     <Property Name="idProveedores" Type="Int32" Nullable="false" />
     <NavigationProperty Name="catProveedores" Relationship="AlmacenTecnoModel.FK_catArticulos_catProveedores" FromRole="catArticulos" ToRole="catProveedores" />
+    <NavigationProperty Name="tblCompras" Relationship="AlmacenTecnoModel.FK_tblCompras_catArticulos" FromRole="catArticulos" ToRole="tblCompras" />
+    <NavigationProperty Name="tblVentas" Relationship="AlmacenTecnoModel.FK_tblVentas_catArticulos" FromRole="catArticulos" ToRole="tblVentas" />
   </EntityType>
   <EntityType Name="catMarcas">
     <Key>
@@ -130,7 +132,7 @@
       <Parameter Name="fecha" Mode="In" Type="DateTime" />
       <Parameter Name="idProveedor" Mode="In" Type="Int32" />
       <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
-      <Parameter Name="articulo" Mode="In" Type="String" />
+      <Parameter Name="idArticulo" Mode="In" Type="Int32" />
       <Parameter Name="cantidad" Mode="In" Type="Decimal" />
       <Parameter Name="precio" Mode="In" Type="Decimal" />
       <Parameter Name="iva" Mode="In" Type="Decimal" />
@@ -164,11 +166,20 @@
       <Parameter Name="fecha" Mode="In" Type="DateTime" />
       <Parameter Name="idCliente" Mode="In" Type="Int32" />
       <Parameter Name="idEmpleado" Mode="In" Type="Int32" />
+      <Parameter Name="idArticulo" Mode="In" Type="Int32" />
       <Parameter Name="cantidad" Mode="In" Type="Decimal" />
       <Parameter Name="precio" Mode="In" Type="Decimal" />
       <Parameter Name="iva" Mode="In" Type="Decimal" />
       <Parameter Name="total" Mode="In" Type="Decimal" />
     </FunctionImport>
+    <AssociationSet Name="FK_tblCompras_catArticulos" Association="AlmacenTecnoModel.FK_tblCompras_catArticulos">
+      <End Role="catArticulos" EntitySet="catArticulos" />
+      <End Role="tblCompras" EntitySet="tblCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVentas_catArticulos" Association="AlmacenTecnoModel.FK_tblVentas_catArticulos">
+      <End Role="catArticulos" EntitySet="catArticulos" />
+      <End Role="tblVentas" EntitySet="tblVentas" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="sp_helpdiagramdefinition_Result">
     <Property Type="Int32" Name="version" Nullable="true" />
@@ -231,6 +242,8 @@
     <NavigationProperty Name="catEmpleados" Relationship="AlmacenTecnoModel.FK_tblCompras_catEmpleados" FromRole="tblCompras" ToRole="catEmpleados" />
     <NavigationProperty Name="catProveedores" Relationship="AlmacenTecnoModel.FK_tblCompras_catProveedores" FromRole="tblCompras" ToRole="catProveedores" />
     <Property Name="articulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idArticulo" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="catArticulos" Relationship="AlmacenTecnoModel.FK_tblCompras_catArticulos" FromRole="tblCompras" ToRole="catArticulos" />
   </EntityType>
   <EntityType Name="tblVentas">
     <Key>
@@ -246,6 +259,8 @@
     <Property Name="total" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
     <NavigationProperty Name="catEmpleados" Relationship="AlmacenTecnoModel.FK_tblVentas_catEmpleados" FromRole="tblVentas" ToRole="catEmpleados" />
     <NavigationProperty Name="tblClientes" Relationship="AlmacenTecnoModel.FK_tblVentas_tblClientes" FromRole="tblVentas" ToRole="tblClientes" />
+    <Property Name="idArticulo" Type="Int32" />
+    <NavigationProperty Name="catArticulos" Relationship="AlmacenTecnoModel.FK_tblVentas_catArticulos" FromRole="tblVentas" ToRole="catArticulos" />
   </EntityType>
   <Association Name="FK_catArticulos_catProveedores">
     <End Type="AlmacenTecnoModel.catProveedores" Role="catProveedores" Multiplicity="1" />
@@ -304,6 +319,30 @@
       </Principal>
       <Dependent Role="tblVentas">
         <PropertyRef Name="idCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblCompras_catArticulos">
+    <End Type="AlmacenTecnoModel.catArticulos" Role="catArticulos" Multiplicity="1" />
+    <End Type="AlmacenTecnoModel.tblCompras" Role="tblCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArticulos">
+        <PropertyRef Name="idArticulo" />
+      </Principal>
+      <Dependent Role="tblCompras">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVentas_catArticulos">
+    <End Type="AlmacenTecnoModel.catArticulos" Role="catArticulos" Multiplicity="0..1" />
+    <End Type="AlmacenTecnoModel.tblVentas" Role="tblVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArticulos">
+        <PropertyRef Name="idArticulo" />
+      </Principal>
+      <Dependent Role="tblVentas">
+        <PropertyRef Name="idArticulo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

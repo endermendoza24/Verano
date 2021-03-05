@@ -24,8 +24,10 @@ namespace CapaDatos
         public decimal iva { get; set; }
         public decimal total { get; set; }
         public string articulo { get; set; }
+        public int idArticulo { get; set; }
     
         public virtual catEmpleados catEmpleados { get; set; }
         public virtual catProveedores catProveedores { get; set; }
+        public virtual catArticulos catArticulos { get; set; }
     }
 }

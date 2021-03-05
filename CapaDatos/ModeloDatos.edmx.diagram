@@ -19,6 +19,8 @@
         <AssociationConnector Association="AlmacenTecnoModel.FK_tblVentas_catEmpleados" />
         <AssociationConnector Association="AlmacenTecnoModel.FK_tblCompras_catProveedores" />
         <AssociationConnector Association="AlmacenTecnoModel.FK_tblVentas_tblClientes" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblCompras_catArticulos" />
+        <AssociationConnector Association="AlmacenTecnoModel.FK_tblVentas_catArticulos" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -92,7 +92,7 @@
     <EntitySetMapping Name="tblCompras">
       <EntityTypeMapping TypeName="AlmacenTecnoModel.tblCompras">
         <MappingFragment StoreEntitySet="tblCompras">
-          <ScalarProperty Name="articulo" ColumnName="articulo" />
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
           <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="iva" ColumnName="iva" />
           <ScalarProperty Name="precio" ColumnName="precio" />
@@ -107,6 +107,7 @@
     <EntitySetMapping Name="tblVentas">
       <EntityTypeMapping TypeName="AlmacenTecnoModel.tblVentas">
         <MappingFragment StoreEntitySet="tblVentas">
+          <ScalarProperty Name="idArticulo" ColumnName="idArticulo" />
           <ScalarProperty Name="total" ColumnName="total" />
           <ScalarProperty Name="iva" ColumnName="iva" />
           <ScalarProperty Name="precio" ColumnName="precio" />

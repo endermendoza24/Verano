@@ -13,10 +13,15 @@ namespace CapaDatos
         public int idProveedor { get; set; }
         public int idCliente { get; set; }
         public int idEmpleado { get; set; }
-        public string articulo { get; set; }
         public decimal cantidad { get; set; }
         public decimal precio { get; set; }
         public decimal iva { get; set; }
         public decimal total { get; set; }
+        public string articulo { get; set; }
+        public int idArticulo { get; set; }
+
+        public virtual catEmpleados catEmpleados { get; set; }
+        public virtual catProveedores catProveedores { get; set; }
+        public virtual catArticulos catArticulos { get; set; }
     }
 }

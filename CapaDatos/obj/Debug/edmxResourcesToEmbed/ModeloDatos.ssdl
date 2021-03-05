@@ -64,7 +64,7 @@
     <Property Name="fecha" Type="date" Nullable="false" />
     <Property Name="idProveedor" Type="int" Nullable="false" />
     <Property Name="idEmpleado" Type="int" Nullable="false" />
-    <Property Name="articulo" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="idArticulo" Type="int" Nullable="false" />
     <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="iva" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -78,6 +78,7 @@
     <Property Name="fecha" Type="date" Nullable="false" />
     <Property Name="idCliente" Type="int" Nullable="false" />
     <Property Name="idEmpleado" Type="int" Nullable="false" />
+    <Property Name="idArticulo" Type="int" />
     <Property Name="cantidad" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="precio" Type="decimal" Precision="18" Scale="0" Nullable="false" />
     <Property Name="iva" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -107,6 +108,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_tblCompras_catArticulos">
+    <End Role="catArticulos" Type="Self.catArticulos" Multiplicity="1" />
+    <End Role="tblCompras" Type="Self.tblCompras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArticulos">
+        <PropertyRef Name="idArticulo" />
+      </Principal>
+      <Dependent Role="tblCompras">
+        <PropertyRef Name="idArticulo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_tblCompras_catEmpleados">
     <End Role="catEmpleados" Type="Self.catEmpleados" Multiplicity="1" />
     <End Role="tblCompras" Type="Self.tblCompras" Multiplicity="*" />
@@ -128,6 +141,18 @@
       </Principal>
       <Dependent Role="tblCompras">
         <PropertyRef Name="idProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_tblVentas_catArticulos">
+    <End Role="catArticulos" Type="Self.catArticulos" Multiplicity="0..1" />
+    <End Role="tblVentas" Type="Self.tblVentas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="catArticulos">
+        <PropertyRef Name="idArticulo" />
+      </Principal>
+      <Dependent Role="tblVentas">
+        <PropertyRef Name="idArticulo" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -181,7 +206,7 @@
     <Parameter Name="fecha" Type="date" Mode="In" />
     <Parameter Name="idProveedor" Type="int" Mode="In" />
     <Parameter Name="idEmpleado" Type="int" Mode="In" />
-    <Parameter Name="articulo" Type="varchar" Mode="In" />
+    <Parameter Name="idArticulo" Type="int" Mode="In" />
     <Parameter Name="cantidad" Type="decimal" Mode="In" />
     <Parameter Name="precio" Type="decimal" Mode="In" />
     <Parameter Name="iva" Type="decimal" Mode="In" />
@@ -203,6 +228,7 @@
     <Parameter Name="fecha" Type="date" Mode="In" />
     <Parameter Name="idCliente" Type="int" Mode="In" />
     <Parameter Name="idEmpleado" Type="int" Mode="In" />
+    <Parameter Name="idArticulo" Type="int" Mode="In" />
     <Parameter Name="cantidad" Type="decimal" Mode="In" />
     <Parameter Name="precio" Type="decimal" Mode="In" />
     <Parameter Name="iva" Type="decimal" Mode="In" />
@@ -255,6 +281,10 @@
       <End Role="catProveedores" EntitySet="catProveedores" />
       <End Role="catArticulos" EntitySet="catArticulos" />
     </AssociationSet>
+    <AssociationSet Name="FK_tblCompras_catArticulos" Association="Self.FK_tblCompras_catArticulos">
+      <End Role="catArticulos" EntitySet="catArticulos" />
+      <End Role="tblCompras" EntitySet="tblCompras" />
+    </AssociationSet>
     <AssociationSet Name="FK_tblCompras_catEmpleados" Association="Self.FK_tblCompras_catEmpleados">
       <End Role="catEmpleados" EntitySet="catEmpleados" />
       <End Role="tblCompras" EntitySet="tblCompras" />
@@ -262,6 +292,10 @@
     <AssociationSet Name="FK_tblCompras_catProveedores" Association="Self.FK_tblCompras_catProveedores">
       <End Role="catProveedores" EntitySet="catProveedores" />
       <End Role="tblCompras" EntitySet="tblCompras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_tblVentas_catArticulos" Association="Self.FK_tblVentas_catArticulos">
+      <End Role="catArticulos" EntitySet="catArticulos" />
+      <End Role="tblVentas" EntitySet="tblVentas" />
     </AssociationSet>
     <AssociationSet Name="FK_tblVentas_catEmpleados" Association="Self.FK_tblVentas_catEmpleados">
       <End Role="catEmpleados" EntitySet="catEmpleados" />

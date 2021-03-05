@@ -94,7 +94,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootsrap\bootstrap.min.css" />
     <Content Include="catArticulos.aspx" />
     <Content Include="catClientes.aspx" />
     <Content Include="catEmpleados.aspx" />
@@ -136,9 +135,6 @@
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="gridTblCompras.aspx" />
     <Content Include="gridTblVentas.aspx" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <Content Include="scripts\jquery-3.5.1.min.js" />
-    <Content Include="scripts\popper.min.js" />
     <Content Include="tblCompras.aspx" />
     <Content Include="tblVentas.aspx" />
     <Content Include="Web.config" />
@@ -268,7 +264,9 @@
       <Name>CapaNegocios</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="bootsrap\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

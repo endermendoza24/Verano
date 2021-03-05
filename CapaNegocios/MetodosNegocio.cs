@@ -78,6 +78,7 @@ namespace CapaNegocios
             tabla.fecha = entidad.fecha;
             tabla.idCliente = entidad.idCliente;
             tabla.idEmpleado = entidad.idEmpleado;
+            tabla.idArticulo = entidad.idArticulo;
             tabla.cantidad = entidad.cantidad;
             tabla.precio = entidad.precio;
             tabla.iva = entidad.iva;
@@ -92,7 +93,7 @@ namespace CapaNegocios
             tabla.idProveedor = entidades.idProveedor;
             //tabla.idCliente = entidades.idCliente;
             tabla.idEmpleado = entidades.idEmpleado;
-            tabla.articulo = entidades.articulo;
+            tabla.idArticulo = entidades.idArticulo;
             tabla.cantidad = entidades.cantidad;
             tabla.precio = entidades.precio;
             tabla.iva = entidades.iva;

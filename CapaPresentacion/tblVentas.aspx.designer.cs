@@ -58,6 +58,24 @@ namespace CapaPresentacion.tablas {
         protected global::System.Web.UI.WebControls.SqlDataSource empleado;
         
         /// <summary>
+        /// Control drpArt.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList drpArt;
+        
+        /// <summary>
+        /// Control art.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource art;
+        
+        /// <summary>
         /// Control txtCantidad.
         /// </summary>
         /// <remarks>

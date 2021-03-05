@@ -14,6 +14,12 @@ namespace CapaDatos
     
     public partial class catArticulos
     {
+        public catArticulos()
+        {
+            this.tblCompras = new HashSet<tblCompras>();
+            this.tblVentas = new HashSet<tblVentas>();
+        }
+    
         public int idArticulo { get; set; }
         public string nombreArticulo { get; set; }
         public int idMarca { get; set; }
@@ -22,5 +28,7 @@ namespace CapaDatos
     
         public virtual catMarcas catMarcas { get; set; }
         public virtual catProveedores catProveedores { get; set; }
+        public virtual ICollection<tblCompras> tblCompras { get; set; }
+        public virtual ICollection<tblVentas> tblVentas { get; set; }
     }
 }

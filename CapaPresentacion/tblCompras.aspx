@@ -24,7 +24,8 @@
         </div>
          <div class="form-group">
             <label>Artículo</label>
-            <asp:TextBox ID="txtArticulo" placeholder="Artículo"  CssClass="form-control"  runat="server"></asp:TextBox>
+             <asp:DropDownList ID="drpArticulo" CssClass="form-control" runat="server" DataSourceID="art" DataTextField="nombreArticulo" DataValueField="idArticulo"></asp:DropDownList>
+             <asp:SqlDataSource ID="art" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [catArticulos]"></asp:SqlDataSource>
         </div>
         <div class="form-group">
             <label>Cantidad</label>

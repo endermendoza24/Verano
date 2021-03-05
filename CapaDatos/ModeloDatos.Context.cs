@@ -209,7 +209,7 @@ namespace CapaDatos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarCliente", numCedulaParameter, primerNombreParameter, primerApellidoParameter);
         }
     
-        public virtual int insertarCompra(Nullable<System.DateTime> fecha, Nullable<int> idProveedor, Nullable<int> idEmpleado, string articulo, Nullable<decimal> cantidad, Nullable<decimal> precio, Nullable<decimal> iva, Nullable<decimal> total)
+        public virtual int insertarCompra(Nullable<System.DateTime> fecha, Nullable<int> idProveedor, Nullable<int> idEmpleado, Nullable<int> idArticulo, Nullable<decimal> cantidad, Nullable<decimal> precio, Nullable<decimal> iva, Nullable<decimal> total)
         {
             var fechaParameter = fecha.HasValue ?
                 new ObjectParameter("fecha", fecha) :
@@ -223,9 +223,9 @@ namespace CapaDatos
                 new ObjectParameter("idEmpleado", idEmpleado) :
                 new ObjectParameter("idEmpleado", typeof(int));
     
-            var articuloParameter = articulo != null ?
-                new ObjectParameter("articulo", articulo) :
-                new ObjectParameter("articulo", typeof(string));
+            var idArticuloParameter = idArticulo.HasValue ?
+                new ObjectParameter("idArticulo", idArticulo) :
+                new ObjectParameter("idArticulo", typeof(int));
     
             var cantidadParameter = cantidad.HasValue ?
                 new ObjectParameter("cantidad", cantidad) :
@@ -243,7 +243,7 @@ namespace CapaDatos
                 new ObjectParameter("total", total) :
                 new ObjectParameter("total", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarCompra", fechaParameter, idProveedorParameter, idEmpleadoParameter, articuloParameter, cantidadParameter, precioParameter, ivaParameter, totalParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarCompra", fechaParameter, idProveedorParameter, idEmpleadoParameter, idArticuloParameter, cantidadParameter, precioParameter, ivaParameter, totalParameter);
         }
     
         public virtual int insertarDetalleCompra(Nullable<int> idArticulo, Nullable<decimal> valorUnitario, Nullable<decimal> cantidad, Nullable<decimal> totalProducto)
@@ -330,7 +330,7 @@ namespace CapaDatos
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarProveedor", nombreProveedorParameter, correoParameter, telefonoParameter, ciudadParameter);
         }
     
-        public virtual int insertarVenta(Nullable<System.DateTime> fecha, Nullable<int> idCliente, Nullable<int> idEmpleado, Nullable<decimal> cantidad, Nullable<decimal> precio, Nullable<decimal> iva, Nullable<decimal> total)
+        public virtual int insertarVenta(Nullable<System.DateTime> fecha, Nullable<int> idCliente, Nullable<int> idEmpleado, Nullable<int> idArticulo, Nullable<decimal> cantidad, Nullable<decimal> precio, Nullable<decimal> iva, Nullable<decimal> total)
         {
             var fechaParameter = fecha.HasValue ?
                 new ObjectParameter("fecha", fecha) :
@@ -343,6 +343,10 @@ namespace CapaDatos
             var idEmpleadoParameter = idEmpleado.HasValue ?
                 new ObjectParameter("idEmpleado", idEmpleado) :
                 new ObjectParameter("idEmpleado", typeof(int));
+    
+            var idArticuloParameter = idArticulo.HasValue ?
+                new ObjectParameter("idArticulo", idArticulo) :
+                new ObjectParameter("idArticulo", typeof(int));
     
             var cantidadParameter = cantidad.HasValue ?
                 new ObjectParameter("cantidad", cantidad) :
@@ -360,7 +364,7 @@ namespace CapaDatos
                 new ObjectParameter("total", total) :
                 new ObjectParameter("total", typeof(decimal));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarVenta", fechaParameter, idClienteParameter, idEmpleadoParameter, cantidadParameter, precioParameter, ivaParameter, totalParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("insertarVenta", fechaParameter, idClienteParameter, idEmpleadoParameter, idArticuloParameter, cantidadParameter, precioParameter, ivaParameter, totalParameter);
         }
     }
 }

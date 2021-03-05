@@ -8,7 +8,7 @@
         <h2>Realizar una venta</h2>
         <div class="form-group">
             <label>Fecha</label>
-            <input type="date" class="form-control" id="dtpFecha" runat="server" />
+            <input type="date" class="form-control datetimepicker" value="10/02/2021" id="dtpFecha" runat="server" />
         </div>
         <div class="form-group">
             <label>Id cliente</label>
@@ -19,6 +19,11 @@
             <label>Id empleado</label>
             <asp:DropDownList ID="drpIdEmpleado" CssClass="form-control" runat="server" DataSourceID="empleado" DataTextField="primerNombre" DataValueField="idEmpleado"></asp:DropDownList>
             <asp:SqlDataSource ID="empleado" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [catEmpleados]"></asp:SqlDataSource>
+        </div>
+        <div class="form-group">
+            <label>Artículo</label>
+            <asp:DropDownList ID="drpArt" CssClass="form-control" runat="server" DataSourceID="art" DataTextField="nombreArticulo" DataValueField="idArticulo"></asp:DropDownList>
+            <asp:SqlDataSource ID="art" runat="server" ConnectionString="<%$ ConnectionStrings:AlmacenTecnoConnectionString %>" SelectCommand="SELECT * FROM [catArticulos]"></asp:SqlDataSource>
         </div>
         <div class="form-group">
             <label>Cantidad</label>

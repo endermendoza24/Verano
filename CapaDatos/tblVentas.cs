@@ -22,8 +22,10 @@ namespace CapaDatos
         public decimal precio { get; set; }
         public decimal iva { get; set; }
         public decimal total { get; set; }
+        public Nullable<int> idArticulo { get; set; }
     
         public virtual catEmpleados catEmpleados { get; set; }
         public virtual tblClientes tblClientes { get; set; }
+        public virtual catArticulos catArticulos { get; set; }
     }
 }

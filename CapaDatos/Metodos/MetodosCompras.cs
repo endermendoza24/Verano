@@ -12,7 +12,7 @@ namespace CapaDatos
 
         public bool insertarCompra(tblCompras entidad)
         {
-            db.insertarCompra(entidad.fecha, entidad.idProveedor, entidad.idEmpleado, entidad.articulo,
+            db.insertarCompra(entidad.fecha, entidad.idProveedor, entidad.idEmpleado, entidad.idArticulo,
                 entidad.cantidad, entidad.precio, entidad.iva, entidad.total);  //  se invoca al procedimeinto almacenado y se le pasa por parametros estos elementos
             db.SaveChanges();
             return true;
